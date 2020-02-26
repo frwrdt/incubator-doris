@@ -31,7 +31,6 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.fs.s3a.S3AFileSystem;
 import org.apache.hadoop.hdfs.HdfsConfiguration;
 import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.hadoop.util.StringUtils;
@@ -131,7 +130,7 @@ public class FileSystemManager {
      * 
      * @param path
      * @param properties
-     * @return BrokerFileSystem with diffetent FileSystem based on scheme
+     * @return BrokerFileSystem with different FileSystem based on scheme
      * @throws URISyntaxException 
      * @throws Exception 
      */
@@ -384,9 +383,7 @@ public class FileSystemManager {
                 conf.set(FS_S3A_ACCESS_KEY, accessKey);
                 conf.set(FS_S3A_SECRET_KEY, secretKey);
                 conf.set(FS_S3A_ENDPOINT, endpoint);
-                S3AFileSystem s3AFileSystem = new S3AFileSystem();
-                s3AFileSystem.initialize(pathUri.getUri(), conf);
-
+                FileSystem s3AFileSystem = FileSystem.get(pathUri.getUri(), conf);
                 fileSystem.setFileSystem(s3AFileSystem);
             }
             return fileSystem;
