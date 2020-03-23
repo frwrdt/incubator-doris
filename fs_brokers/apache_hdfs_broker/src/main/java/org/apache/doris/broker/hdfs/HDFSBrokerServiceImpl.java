@@ -81,6 +81,9 @@ public class HDFSBrokerServiceImpl implements TPaloBrokerService.Iface {
             TBrokerOperationStatus errorStatus = e.generateFailedOperationStatus();
             response.setOpStatus(errorStatus);
             return response;
+        } catch (Exception ae) {
+            logger.error(ae.getMessage(), ae);
+            return response;
         }
     }
 
