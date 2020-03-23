@@ -604,7 +604,7 @@ public class FileSystemManager {
             long currentStreamOffset;
             try {
                 currentStreamOffset = fsDataOutputStream.getPos();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 logger.error("errors while get file pos from output stream", e);
                 throw new BrokerException(TBrokerOperationStatusCode.TARGET_STORAGE_SERVICE_ERROR,
                     "errors while get file pos from output stream");
