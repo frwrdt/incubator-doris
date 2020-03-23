@@ -27,6 +27,6 @@
     </property>
     <property>
         <name>fs.s3a.readahead.range</name>
-        <value>128M</value>
+        <value>4K</value>
     </property>
 </configuration>
