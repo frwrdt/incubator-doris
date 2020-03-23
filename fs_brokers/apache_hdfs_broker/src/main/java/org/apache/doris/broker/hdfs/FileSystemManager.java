@@ -239,6 +239,7 @@ public class FileSystemManager {
                 // create a new filesystem
                 Configuration conf = new Configuration();
                 conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
+                conf.set("fs.hdfs.impl.disable.cache", "true");
                 // TODO get this param from properties
                 // conf.set("dfs.replication", "2");
                 String tmpFilePath = null;
@@ -382,6 +383,7 @@ public class FileSystemManager {
                 // create a new filesystem
                 Configuration conf = new Configuration();
                 conf.set("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem");
+                conf.set("fs.s3a.impl.disable.cache", "true");
 
                 conf.addResource(new Path(System.getProperty("user.dir") + "/conf/s3-site.xml"));
                 logger.info("tag " + conf.get("fs.s3a.experimental.input.fadvise"));
