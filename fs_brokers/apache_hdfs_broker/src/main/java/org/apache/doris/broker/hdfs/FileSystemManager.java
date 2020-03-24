@@ -400,6 +400,9 @@ public class FileSystemManager {
         } catch (Exception e) {
             logger.error("errors while connect to " + path, e);
             throw new BrokerException(TBrokerOperationStatusCode.NOT_AUTHORIZED, e);
+        } catch (Throwable t) {
+            logger.error("tag Throwable ", t);
+            throw new BrokerException(TBrokerOperationStatusCode.NOT_AUTHORIZED, t);
         } finally {
             fileSystem.getLock().unlock();
         }
