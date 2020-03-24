@@ -170,14 +170,14 @@ under the License.
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-annotations</artifactId>
-            <version>3.1.1</version>
+            <version>3.2.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-auth -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-auth</artifactId>
-            <version>3.1.1</version>
+            <version>3.2.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->
@@ -191,14 +191,14 @@ under the License.
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
-            <version>3.1.1</version>
+            <version>3.2.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
-            <version>3.1.1</version>
+            <version>3.2.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.htrace/htrace-core -->
