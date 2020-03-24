@@ -29,4 +29,8 @@
         <name>fs.s3a.readahead.range</name>
         <value>64K</value>
     </property>
+    <property>
+        <name>fs.s3a.socket.recv.buffer</name>
+        <value>64K</value>
+    </property>
 </configuration>
