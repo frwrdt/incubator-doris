@@ -386,7 +386,9 @@ public class FileSystemManager {
                 conf.set("fs.s3a.impl.disable.cache", "true");
 
                 conf.addResource(new Path(System.getProperty("user.dir") + "/conf/s3-site.xml"));
-                logger.info("tag " + conf.get("fs.s3a.experimental.input.fadvise"));
+                logger.info("tag conf " + conf.get("fs.s3a.experimental.input.fadvise"));
+                logger.info("tag conf " + conf.get("fs.s3a.readahead.range"));
+                logger.info("tag conf " + conf.get("fs.s3a.block.size"));
                 conf.set(FS_S3A_ACCESS_KEY, accessKey);
                 conf.set(FS_S3A_SECRET_KEY, secretKey);
                 conf.set(FS_S3A_ENDPOINT, endpoint);
